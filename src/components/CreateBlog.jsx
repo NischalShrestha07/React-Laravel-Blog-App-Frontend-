@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const CreateBlog = () => {
-    const [html, setHtml] = useState('')
 
-    function onChange(e) {
-        setHtml(e.target.value);
-    }
+    const [html, setHtml] = useState('')
+    const navigate = useNavigate();
+    // function onChange(e) {
+    //     setHtml(e.target.value);
+    // }
     const {
         register,
         handleSubmit,
@@ -22,6 +25,8 @@ const CreateBlog = () => {
             },
             body: JSON.stringify(data)
         });
+        toast("Blog added successfully.")
+        navigate('/')
         // console.log(data);
     }
     return (
