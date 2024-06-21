@@ -62,6 +62,7 @@ const CreateBlog = () => {
                 <Link to="/ " className='btn btn-dark'>Back</Link>
             </div>
             <div className="card border-0 shadow-lg">
+
                 <form onSubmit={handleSubmit(formSubmit)}>
                     <div className="card-body">
                         <div className="mb-3">
