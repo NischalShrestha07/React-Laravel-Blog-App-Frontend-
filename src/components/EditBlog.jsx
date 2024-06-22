@@ -56,14 +56,15 @@ const EditBlog = () => {
         // const newData={...data,imageId}
         data.image_Id = imageId;//shows the image in the DB
 
-        const res = await fetch("http://localhost:8000/api/blogs", {
-            method: "POST",
+        const res = await fetch("http://localhost:8000/api/blogs/" + params.id, {
+            method: "PUT",
             headers: {
                 'Content-type': 'appliacation/json'
             },
             body: JSON.stringify(data)
         });
-        toast("Blog added successfully.")// shows the icon printing this when blog created.
+        toast("Blog updated successfully.")// shows the icon printing this when blog created.
+
         navigate('/')
         // console.log(data);
     }
