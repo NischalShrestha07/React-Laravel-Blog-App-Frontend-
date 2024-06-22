@@ -25,7 +25,7 @@ const Blogs = () => {
 
                 {
                     (blogs) && blogs.map((blog) => {
-                        return (<BlogCard blog={blog} key={blog} />)
+                        return (<BlogCard blog={blog} key={blog.id} />)
                     })
                 }
 
