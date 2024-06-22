@@ -20,6 +20,12 @@ const Blogs = () => {
         const result = await res.json();
         setBlogs(result.data)
     }
+    const resetSearch = () => {
+        fetchBlogs();//fetches all blogs
+        setKeyword('')//search bar will be empty after the reset
+
+    }
+
     useEffect(() => {
         fetchBlogs();
     }, []);
@@ -31,7 +37,7 @@ const Blogs = () => {
                         <input style={{ padding: '15px', fontSize: '25px', borderRadius: '15px' }} type="text" value={keyword} onChange={(e) => setKeyword(e.target.value)} className='form-control' placeholder='Search Blogs' />
                         <button style={{ background: 'black', color: 'white', padding: '1px 20px', fontFamily: 'cursive', fontSize: '25px' }}>Search</button>
 
-                        <button style={{ background: 'black', color: 'white', padding: '1px 20px', fontFamily: 'cursive', fontSize: '25px' }}>Reset</button>
+                        <button style={{ marginLeft: "20px", background: 'green', color: 'white', padding: '1px 20px', fontFamily: 'cursive', fontSize: '25px' }} onClick={() => resetSearch()}>Reset</button>
 
                     </div>
                 </form>
