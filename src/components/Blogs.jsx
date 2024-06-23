@@ -34,7 +34,7 @@ const Blogs = () => {
             <div className="d-flex justify-content-center pt-5 mb-4 " >
                 <form onSubmit={(e) => searchBlogs(e)}>
                     <div style={{ display: 'flex' }}>
-                        <input style={{ padding: '15px', fontSize: '25px', borderRadius: '15px' }} type="text" value={keyword} onChange={(e) => setKeyword(e.target.value)} className='form-control' placeholder='Search Blogs' />
+                        <input style={{ padding: '1 5px', fontSize: '25px', borderRadius: '15px' }} type="text" value={keyword} onChange={(e) => setKeyword(e.target.value)} className='form-control' placeholder='Search Blogs' />
                         <button style={{ background: 'black', color: 'white', padding: '1px 20px', fontFamily: 'cursive', fontSize: '25px' }}>Search</button>
 
                         <button style={{ marginLeft: "20px", background: 'green', color: 'white', padding: '1px 20px', fontFamily: 'cursive', fontSize: '25px' }} onClick={() => resetSearch()}>Reset</button>
